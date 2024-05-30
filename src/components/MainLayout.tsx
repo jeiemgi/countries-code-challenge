@@ -1,8 +1,6 @@
 import React, {PropsWithChildren} from 'react';
 import Link, {LinkProps} from "next/link";
-import {Inter} from "next/font/google";
-
-const inter = Inter({subsets: ["latin"]});
+import {GH_URL} from "~/js/constants";
 
 
 function HeaderLink(props: PropsWithChildren<LinkProps>) {
@@ -22,7 +20,7 @@ function MainLayout({children}: PropsWithChildren) {
                     </div>
                     <ul className={"flex items-center gap-2"}>
                         <li>
-                            <HeaderLink href="/">Github</HeaderLink>
+                            <HeaderLink href={GH_URL}>Github</HeaderLink>
                         </li>
                     </ul>
                 </nav>
